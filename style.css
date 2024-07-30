@@ -2,7 +2,6 @@
 body {
     margin: 0;
     padding: 0;
-
 }
 
 /* Stilizarea pentru c1 */
@@ -137,16 +136,24 @@ body {
     font-size: 1.5em;
 }
 
-
 /* Stilizare pentru secțiunea Condiții de Lucru */
 .working-conditions {
     padding: 20px;
     background-color: #f9f9f9; /* Fundal deschis pentru citire ușoară */
     border-radius: 8px; /* Colțuri rotunjite */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Umbra discretă pentru efect de adâncire */
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1); /* Umbra discretă pentru efect de adâncire */
     margin: 20px; /* Spațiu în jurul secțiunii */
     max-width: 1200px; /* Lățime maximă pentru a se potrivi ecranelor mari */
-    margin: 20px auto; /* Centrare automată pe pagină */
+    margin: 20px auto; /* Centrează secțiunea pe pagină */
+    opacity: 0; /* Inițial invizibil */
+    animation: fadeInWorkingConditions 2s ease forwards; /* Animația de apariție a secțiunii */
+    animation-delay: 4s; /* Așteaptă până animația textului de pe imagine este completă */
+}
+
+@keyframes fadeInWorkingConditions {
+    to {
+        opacity: 1;
+    }
 }
 
 .working-conditions h3 {
@@ -160,43 +167,150 @@ body {
     margin: 10px 0 0; /* Margini pentru textul paragrafului */
     font-size: 22px; /* Dimensiune font standard */
     font-family: 'Edu AU VIC WA NT Hand', cursive; /* Font de text plăcut la citire */
-    color: #555; /* Culoare text puțin mai deschisă pentru contrast */
+    color: #070707; /* Culoare text puțin mai deschisă pentru contrast */
     line-height: 1.6; /* Înălțimea liniei pentru citire mai ușoară */
 }
 
 /* Stilizare responsivă */
 @media (max-width: 768px) {
     .c1 .left, .c1 .right {
-        font-size: 3em; /* Font mai mic pentru ecrane mici */
+        font-size: 2.5em; /* Font mai mic pentru ecrane mici */
     }
 
     .text-overlay h1 {
-        font-size: 2em;
+        font-size: 2.5em;
     }
 
     .text-overlay p {
         font-size: 1em;
     }
 
-
     .working-conditions {
         margin: 10px; /* Spațiu mai mic pentru ecrane mici */
     }
+    
+   
 }
 
 @media (max-width: 480px) {
     .c1 .left, .c1 .right {
-        font-size: 3em; /* Font mai mic pentru ecrane foarte mici */
+        font-size: 2.5em; /* Font mai mic pentru ecrane foarte mici */
     }
 
     .text-overlay h1 {
-        font-size: 1.5em;
+        font-size: 2.5em;
     }
 
     .text-overlay p {
-        font-size: 0.875em;
+        font-size: 0.9em;
     }
+    
     .working-conditions {
         margin: 5px; /* Spațiu și mai mic pentru ecrane foarte mici */
+    }
+    
+   
+}
+
+/* Stilizare pentru imaginile cu hărți */
+.map-images {
+    display: flex;
+    flex-wrap: wrap; /* Permite imaginilor să se înfășoare pe ecrane mici */
+    justify-content: space-around; /* Spațiere uniformă între imagini */
+    gap: 10px; /* Spațiu între imagini */
+    margin-top: 20px; /* Spațiu deasupra imaginilor */
+}
+
+.map-images img {
+    max-width: 100%; /* Asigură că imaginile nu depășesc lățimea containerului */
+    height: auto; /* Menține proporțiile imaginilor */
+    border-radius: 8px; /* Colțuri rotunjite */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Umbră discretă pentru imagini */
+}
+
+/* Stilizare pentru ecrane mici */
+@media (max-width: 768px) {
+    .map-images {
+        flex-direction: column; /* Aliniază imaginile vertical pe ecrane mici */
+        align-items: center; /* Centrează imaginile pe axa orizontală */
+    }
+}
+
+.contact-section {
+    padding: 20px;
+    background-color: #f9f9f9; /* Fundal deschis pentru un contrast plăcut */
+    border-radius: 8px; /* Colțuri rotunjite */
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1); /* Umbra discretă pentru efect de adâncire */
+    margin: 40px auto; /* Spațiu deasupra și dedesubtul secțiunii */
+    max-width: 1200px; /* Lățime maximă pentru a se potrivi ecranelor mari */
+    
+}
+
+/* Stilizare pentru titlu și paragraf în secțiunea de contact */
+.contact-section h3 {
+    margin-top: 0; /* Elimină marginea de sus */
+    font-size: 1.8em; /* Font mare pentru titlu */
+    font-family: "Bevan", serif; /* Font elegant */
+    color: #333; /* Culoare text închisă pentru claritate */
+}
+
+.contact-section p {
+    margin: 10px 0 0; /* Margini pentru textul paragrafului */
+    font-size: 22px; /* Dimensiune font standard */
+    font-family: 'Edu AU VIC WA NT Hand', cursive; /* Font de text plăcut la citire */
+    color: #070707; /* Culoare text puțin mai deschisă pentru contrast */
+    line-height: 1.6; /* Înălțimea liniei pentru citire mai ușoară */
+}
+
+/* Stilizare responsivă pentru secțiunea de contact */
+@media (max-width: 768px) {
+    .contact-section {
+        margin: 20px; /* Spațiu mai mic pentru ecrane mici */
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-section {
+        margin: 10px; /* Spațiu și mai mic pentru ecrane foarte mici */
+    }
+}
+/* Stilizare pentru footer */
+.footer {
+    background-color: #000; /* Fundal negru */
+    color: #fff; /* Text alb */
+    padding: 20px; /* Spațiu intern */
+    position: relative; /* Permite poziționarea absolută a altor elemente */
+    text-align: center; /* Centrează textul */
+    border-top: 2px solid #333; /* Linie de separare între conținutul principal și footer */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around; /* Spațiu uniform între elemente */
+    align-items: center; /* Centrează vertical elementele */
+    flex-wrap: wrap; /* Permite elementelor să se înfășoare pe ecrane mici */
+}
+
+.footer-item {
+    flex: 1;
+    margin: 10px; /* Spațiu între elemente */
+}
+
+.footer-item h4 {
+    margin: 0 0 10px 0; /* Margină de sus și jos pentru titluri */
+    font-size: 1.2em; /* Dimensiune font pentru titluri */
+    font-family: "Bevan", serif; /* Font elegant pentru titluri */
+}
+
+.footer-item p {
+    margin: 0; /* Elimină marginea implicită */
+    font-size: 1em; /* Dimensiune standard pentru text */
+    font-family: 'Edu AU VIC WA NT Hand', cursive; /* Font plăcut la citire */
+}
+
+/* Stilizare responsivă pentru footer */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Aliniază elementele vertical pe ecrane mici */
     }
 }
