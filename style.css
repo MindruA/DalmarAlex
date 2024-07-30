@@ -2,6 +2,7 @@
 body {
     margin: 0;
     padding: 0;
+
 }
 
 /* Stilizarea pentru c1 */
@@ -136,28 +137,31 @@ body {
     font-size: 1.5em;
 }
 
-/* Stilizare pentru titlul 'Despre noi' */
-.about-us {
-    text-align: center;
+
+/* Stilizare pentru secțiunea Condiții de Lucru */
+.working-conditions {
     padding: 20px;
-    opacity: 0; /* Inițial invizibil */
-    animation: fadeInAboutUs 1.5s ease forwards; /* Durată mai scurtă pentru animația 'Despre noi' */
-    animation-delay: 4s; /* Așteaptă până ce animația textului de pe imagine este completă */
+    background-color: #f9f9f9; /* Fundal deschis pentru citire ușoară */
+    border-radius: 8px; /* Colțuri rotunjite */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Umbra discretă pentru efect de adâncire */
+    margin: 20px; /* Spațiu în jurul secțiunii */
+    max-width: 1200px; /* Lățime maximă pentru a se potrivi ecranelor mari */
+    margin: 20px auto; /* Centrare automată pe pagină */
 }
 
-@keyframes fadeInAboutUs {
-    to {
-        opacity: 1;
-    }
+.working-conditions h3 {
+    margin-top: 0; /* Elimină marginea de sus */
+    font-size: 1.8em; /* Font mai mare pentru titlu */
+    font-family: "Bevan", serif; /* Font elegant */
+    color: #333; /* Culoare text închisă pentru claritate */
 }
 
-.about-us h2 {
-    margin: 0;
-    font-size: 3em; /* Font mai mare pentru titlu */
-    color: black;
-    font-family: 'Oswald', sans-serif; /* Font elegant și proeminent */
-    font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Umbră text */
+.working-conditions p {
+    margin: 10px 0 0; /* Margini pentru textul paragrafului */
+    font-size: 1em; /* Dimensiune font standard */
+    font-family: 'Edu AU VIC WA NT Hand', cursive; /* Font de text plăcut la citire */
+    color: #555; /* Culoare text puțin mai deschisă pentru contrast */
+    line-height: 1.6; /* Înălțimea liniei pentru citire mai ușoară */
 }
 
 /* Stilizare responsivă */
@@ -174,8 +178,9 @@ body {
         font-size: 1em;
     }
 
-    .about-us h2 {
-        font-size: 2em; /* Font mai mic pentru ecrane medii */
+
+    .working-conditions {
+        margin: 10px; /* Spațiu mai mic pentru ecrane mici */
     }
 }
 
@@ -191,8 +196,7 @@ body {
     .text-overlay p {
         font-size: 0.875em;
     }
-
-    .about-us h2 {
-        font-size: 1.5em; /* Font și mai mic pentru ecrane foarte mici */
+    .working-conditions {
+        margin: 5px; /* Spațiu și mai mic pentru ecrane foarte mici */
     }
 }
